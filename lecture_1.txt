@@ -1,0 +1,29 @@
+#!/bin/bash
+
+ech "Hello ITP270"
+phrase="Hello to you!"
+echo $phrase
+
+#!/bin/bash
+
+echo "Hello ITP270"
+phrase"Hello to yo too"
+echo=$pharse
+
+
+first_gretting=Nice to meet you!"
+later_grettings="How are you?"
+greeting_occasions=1
+
+if [ "$greeting_occasion" -lt 1 ]
+then
+        echo $first_gretting
+else
+        echo $later_gretting
+
+else
+
+
+while [ $greeting_occasion -lt 3 ]
+do
+
