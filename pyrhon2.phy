@@ -1,0 +1,13 @@
+#!/bin/python3
+
+first_name = "Ricky"
+last_name = Dunbar"
+full_name = first_name + " "+  lastname
+
+age = 34
+
+print("Your full name is " + full_name + and your age is " + str(age)
+
+description = "Hi, my name is ...
+		My hobby is...
+print description

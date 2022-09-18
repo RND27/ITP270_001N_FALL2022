@@ -1,0 +1,5 @@
+if git shows everthing is updated then use the following commands
+
+git init
+git add -A
+git commot -m 'Fix bad rep'
