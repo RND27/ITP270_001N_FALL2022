@@ -1,4 +1,3 @@
-
 #!/bin/bash
 echo "Enter the Subnet:"
 read Subnet
@@ -12,3 +11,9 @@ else
 		ping -c 1 $Subnet.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" >> discoveredIPs.txt &
 done
 fi
+
+cat discoveredIPs.txt | sort > discoveredIPs.txt
+
+nmap -T4 -A -sV -iL discoveredIPs.txt -oN PortScanIPs.txt --append-output
+
+exit

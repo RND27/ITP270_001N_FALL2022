@@ -2,10 +2,9 @@
 
 echo "Enter the first name and press enter: "
 read first_name
+
 echo "Enter the last name and press enter: "
 read last_name
-
-echo $first_name $last_name
 
 echo "searching for" $first_name $last_name
 
