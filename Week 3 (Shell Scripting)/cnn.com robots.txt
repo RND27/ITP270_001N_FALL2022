@@ -1,0 +1,15 @@
+--2022-10-02 21:30:25--  http://cnn.com/robots.txt
+Resolving squid.cyberservices.internal (squid.cyberservices.internal)... 10.1.97.35, 10.1.99.201
+Connecting to squid.cyberservices.internal (squid.cyberservices.internal)|10.1.97.35|:80... connected.
+Proxy request sent, awaiting response... 301 Moved Permanently
+Location: http://www.cnn.com/robots.txt [following]
+--2022-10-02 21:30:25--  http://www.cnn.com/robots.txt
+Reusing existing connection to squid.cyberservices.internal:80.
+Proxy request sent, awaiting response... 200 OK
+Length: 1247 (1.2K) [text/plain]
+Saving to: ‘robots.txt.3’
+
+     0K .                                                     100%  193M=0s
+
+2022-10-02 21:30:25 (193 MB/s) - ‘robots.txt.3’ saved [1247/1247]
+
