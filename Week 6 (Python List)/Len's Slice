@@ -3,7 +3,7 @@
 #10-01-2022
 ##Prof. Islam
 
-//Len's Slice
+#Len's Slice
 
 toppings = ["pepperoni", "pineapple", "cheese", "sausage", "olive", "anchovies", "mushrooms"]
 prices = [2, 6, 1, 3, 2, 7, 2]
