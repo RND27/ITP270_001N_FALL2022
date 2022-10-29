@@ -43,15 +43,15 @@ def convert_ip(ip):
 def scan_port(ipaddress, port):
     '''Function scans PORTS of the target and sets the connection timeout to 0.5 to connect (faster but not as accurate increase number for better accuracy) >> If there is a banner, collect the port banner, strip out the unwanted characters, and print to the terminal window >> If no port banner print open port >> If port is closed pass (print nothing to the terminal)//'''
     try:
-        sock = socket.socket()
-        sock.settimeout(.01)
-        sock.connect((ipaddress, port))
+	sock = socket.socket()
+	sock.settimeout(.01)
+	sock.connect((ipaddress, port))
 
-        try:
-            ports.append(port)
-            banner = sock.recv(1024).decode().strip('\n').strip('\r')
-            banners.append(banner)
-        except:
+	try:
+		ports.append(port)
+		banner = sock.recv(1024).decode().strip('\n').strip('\r')
+		banners.append(banner)
+		except:
             banners.append(' ')
         sock.close()
     except:
