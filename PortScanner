@@ -21,28 +21,28 @@ print ("Scanning the following Host: " + target)
 print ("_" * 50)
 
 try:
-
-	for port in range (1,4000):
-
-		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-		result = s.connect_ex((target, port))
-
-		if result ==0:
-
-			print ("Port {}: is open".format(port))
-
-		s.close()
-
-
+	
+		for port in range (1,4000):
+	
+				s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			
+				result = s.connect_ex((target, port))
+			
+				if result ==0:
+			
+				  print ("Port {}: is open".format(port))
+			
+				s.close()
+			
+			
 except KeyboardInterrupt:
-	print ("\n The Scan was Canceled")
-	sys.exit()
+  print ("\n The Scan was Canceled")
+  sys.exit()
 
 except socket.gaierror:
-	print("\n Hostname Could Not Be Resolved")
-	sys.exit()
+  print("\n Hostname Could Not Be Resolved")
+  sys.exit()
 
 except socket.error:
-	print("\n No response")
-	sys.exit()
+  print("\n No response")
+  sys.exit()
