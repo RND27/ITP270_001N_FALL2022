@@ -22,19 +22,19 @@ ports = []
 banners = []
 
 def scan(target):
-	'''//scan target function//'''
-	converted_ip = convert_ip(target)
-	print('\n' + 'Scanning Target : ' + str(target))
-	for port in range(21,80):
-		scan_port(converted_ip, port)
+    '''//scan target function//'''
+    converted_ip = convert_ip(target)
+    print('\n' + 'Scanning Target : ' + str(target))
+    for port in range(21, 80):
+        scan_port(converted_ip, port)
 
 def convert_ip(ip):
-	'''//Function converts the hostname if not already an IP//'''
-	try:
-		IP(ip)
-		return(ip)
-	except ValueError:
-		return socket.gethostbyname(ip)
+    '''//Function converts the hostname if not already an IP//'''
+    try:
+        IP(ip)
+        return(ip)
+    except ValueError:
+        return socket.gethostbyname(ip)
 
 #def get_banner(s):
 #    '''//Function grabs any port banner and returns the data received//'''
@@ -43,15 +43,15 @@ def convert_ip(ip):
 def scan_port(ipaddress, port):
     '''Function scans PORTS of the target and sets the connection timeout to 0.5 to connect (faster but not as accurate increase number for better accuracy) >> If there is a banner, collect the port banner, strip out the unwanted characters, and print to the terminal window >> If no port banner print open port >> If port is closed pass (print nothing to the terminal)//'''
     try:
-	sock = socket.socket()
-	sock.settimeout(.01)
-	sock.connect((ipaddress, port))
+        sock = socket.socket()
+        sock.settimeout(0.01)
+        sock.connect((ipaddress, port))
 
-	try:
-		ports.append(port)
-		banner = sock.recv(1024).decode().strip('\n').strip('\r')
-		banners.append(banner)
-		except:
+        try:
+            ports.append(port)
+            banner = sock.recv(1024).decode().strip('\n').strip('\r')
+            banners.append(banner)
+        except:
             banners.append(' ')
         sock.close()
     except:
@@ -60,12 +60,12 @@ def scan_port(ipaddress, port):
 #//Scan multiple targets specified with a comma else scan one specified target//
 #//Line 58 prevents the scan function from being called twice if the script is imported into another module//
 if __name__ == "__main__":
-	targets = input('[+] Enter Target/s To Scan(for multiple targets use a comma): ')
-	if ',' in targets:
-		for ip_address in targets.split(', '):
-			scan(ip_address.strip(' '))
-	else:
-		scan(targets)
+    targets = input('[+] Enter Target/s To Scan(for multiple targets use a comma): ')
+    if ',' in targets:
+        for ip_address in targets.split(', '):
+            scan(ip_address.strip(' '))
+    else:
+        scan(targets)
 
 with open("vulnerable_banners.txt", 'r') as file:
     count = 0
