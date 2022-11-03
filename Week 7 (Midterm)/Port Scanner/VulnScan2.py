@@ -103,4 +103,4 @@ time_completed = datetime.now().replace(microsecond=0)
 time_total = time_completed - time_start
 
 print("Scanning ended at:" + str(time_completed)) 
-print("Scanning Completed in " + str(time_total)
+print("Scanning Completed in " + str(time_total))
