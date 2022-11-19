@@ -14,7 +14,7 @@ class Grade:
   def __init__(self, score):
     self.score = score
     
-michael = Student("Michael Scott", 65)
-jim = Student("Jim Halpert", 90)
-pam = Student("Pam Beesly", 98)
-pam.add_grade(Grade(100))
+roger = Student("Roger van der Weyden", 10)
+sandro = Student("Sandro Botticelli", 12)
+pieter = Student("Pieter Bruegel the Elder", 8)
+pieter.add_grade(Grade(100))
