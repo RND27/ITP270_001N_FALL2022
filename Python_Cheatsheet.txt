@@ -1,0 +1,155 @@
+#Declare a string
+string_1 = "Hello World!"
+
+#Access the first character of the string
+first_char = string_1[0]
+#print(first_char)
+
+#Slicing string from index 2 to index 5 (Upper bound is exclusive)
+slice_1 = string_1[2:6] #llo
+#Slicing string until 5th Index
+slice_2 = string_1[:5] #Hello
+#Slicing from the 5th index 
+slice_3 = string_1[5:] # World!
+
+#Concatenating String 
+string_2 = "Welcome to Python Coding!"
+new_string = string_1 + " " + string_2 #Hello World! Welcome to Python Coding!
+
+#Get the length of String
+length_slice_1 = len(slice_1) #Length should be 4
+
+#Strings are immutable so changing a character acessing directly won't work
+first_name = "Bob"
+#To change it to Rob
+changed_first_name = "R" + first_name[1:]
+
+#Check if a charater is in a string
+#print("b" in "blueberry") #It should print True
+
+#String Methods
+"Hello World!".upper() #All letters are going to be upper
+"Hello World!".lower() #All letters are going to be lower
+"Hello world!".title() #All the first letters are going to be upper
+"Hello World!".split() #Split the words by comma
+''.join(["Hello", "World"]) #Join the two different words
+"Hello World!".replace("H", "J") #Replace the letter 'H' by 'J')
+"     Hello World    ".strip() #Trim the whitespaces
+print_string = "{} {}".format("Hello", "World")
+
+ 
+
+#Declare a list
+list_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+#Access the first element of list
+first_element = list_1[0]
+#print(first_element)
+
+#Slicing list from index 2 to index 5 (Upper bound is exclusive)
+slice_list_1 = list_1[2:6] #[3, 4, 5, 6]
+#Slicing list until 5th index
+slice_list_2 = list_1[:5] #[1, 2, 3, 4, 5]
+#Slicing list from the 5th Index
+slice_list_3 = list_1[5:] #[6, 7, 8, 9]
+
+#Add a new element to the list at the end using append method
+list_1.append(10)
+#Add an element to the specific position using insert method
+list_1.insert(0, -1) #Adding -1 in position 0
+#Add two lists together using '+' sign
+new_list = slice_list_1 + slice_list_2
+#Add a new list item using '+' sign
+list_2 = [1, 2, 3, 4, 5, 6] + [7, 8, 9]
+#Trying to access a list element that doesn't exist will produce IndexError 
+#print(list_2[13]) will print IndexError 
+
+#Remove an item from the list
+list_2.remove(4)
+#Remove an element using pop
+list_1.pop()
+#Remove an element using index position with pop
+new_list.pop(2) #Index 2 will get removed 
+
+#Create a list with range
+new_range = range(10)
+list_4 = list(new_range) #Should print [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+#Power of range
+my_range = range(0, 40, 5) #Starts with 0, ends before 40, and increases by 5
+
+#Count method to count how many times the same element appears
+list_1.count(1)
+
+#Sorting the list
+list_1.sort()
+#Reverse sorting
+list_1.sort(reverse=True)
+#using sorted function
+new_sorted_list_4 = sorted(list_4)
+
+#2D list
+list_2D = [["Shahpar", 7], ["Aaron", 9], ["Royal", 11]]
+#Access 2D list
+list_2D[0][0] #Should print "Shahpar"
+#Modify 2D list
+list_2D[0][0] = "Islam" #Should replace "Shahpar" by "Islam"
+
+#Length of the list
+length_list_1 = len(list_1) #Length should be 11
+
+#Create a Dictionary
+dict_1 = {"Key" : "Value", "Name" : "Shahpar"}
+
+#Access the first value of dictionary
+first_value_of_dict = dict_1["Key"]
+#print(first_value_of_dict)
+
+#Length of the dictionary
+length_dict = len(dict_1) #Length should be 2
+
+#How to add a key?
+dict_1["new_key"] = "new_value"
+
+#How to update the dictionary? / Add multiple key?
+dict_1.update({"Age":7, "Role":"Instructor"})
+
+#Check if the key is present
+if "Key_name" in dict_1:
+  print(dict_1["Key_name"])
+
+#How to get a key?
+get_role = dict_1.get("Role")
+#If the key doesn't exist then we can use a default value
+get_salary = dict_1.get("Salary", 100) #Here 100 is the default value
+
+#How to delete a key?
+#Just like get we can remove a key by using the value
+dict_1.pop("Islam", "Value not found")
+
+#How to get all the key?
+all_keys = dict_1.keys()
+
+#How to get all the values?
+#declare a variable and use dict_1.values() to get all the values added to the variable
+
+#How to get all the items from the dictionary?
+#using dict_1.item() will give the items in (key, value) mode
+
+#How to delete all the items?
+
+#How to overwrite values?
+dict_1["Name"] = "Islam"
+
+#Dictionary Comprehension (Combining 2 lists into 1 dictionary)
+leo_movies = ["Titanic", "Blood Diamond", "Wolf of Wall Street"]
+leo_movie_year = [1997, 2006, 2013]
+combined_list = zip(leo_movies, leo_movie_year)
+leo_dict = {key:value for key, value in combined_list}
+#print(leo_dict)
+
+#try-catch block
+# try:
+#   print(leo_dict["The Great Gatsby"])
+# except KeyError:
+#   print("The Key doesn't exist!")
