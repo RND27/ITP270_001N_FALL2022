@@ -1,3 +1,8 @@
+class Business:
+  def __init__(self, name, franchises):
+    self.name = name
+    self.franchises = franchises
+
 class Franchise:
   def __init__(self, address, menus):
     self.address = address
@@ -5,11 +10,6 @@ class Franchise:
 
   def __repr__(self):
     return("The restaurant is in {a}".format(a = self.address))
-
-class Business:
-  def __init__(self, name, franchises):
-    self.name = name
-    self.franchises = franchises
 
   def __repr__(self):
     return self.address
