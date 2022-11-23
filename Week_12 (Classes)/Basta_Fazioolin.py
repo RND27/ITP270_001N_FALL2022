@@ -3,15 +3,15 @@ class Franchise:
     self.address = address
     self.menus = menus
 
-def __repr__(self):
-  return self.address
+  def __repr__(self):
+    return self.address
 
-def available_menus(self, time):
-      avaiable_menus = []
-      for menu in self.menus:
-        if time >= menu.start_time and time <= menu.end_time:
-            available_menus.append(menu)
-      return available_menu
+  def available_menus(self, time):
+    available_menu = []
+    for menu in self.menus:
+      if time >= menu.start_time and time < menu.end_time:
+        available_menu.append(menu)
+    return(available_menu)
         
 class Menu:
     def __init__(self, name, items, start_time, end_time):
@@ -42,7 +42,7 @@ brunch_items = {
   'mimosa': 10.50,
   'orange juice': 3.50
 }
-brunch = Menu('Brunch', brunch_items, 1100, 1600)
+brunch_menu = Menu('Brunch', brunch_items, 1100, 1600)
 
 # Early Bird Menu
 early_bird_items = {
@@ -68,7 +68,7 @@ dinner_items = {
   'coffee': 2.00,
   'espresso': 3.00
 }
-dinner = Menu('Dinner', dinner_items, 1700, 2300)
+dinner_menu = Menu('Dinner', dinner_items, 1700, 2300)
 
 # Kids Menu
 kids_items = {
@@ -76,7 +76,7 @@ kids_items = {
   'fusilli with wild mushrooms': 12.00,
   'apple juice': 3.00
 }
-kids = Menu('Kids', kids_items, 1100, 2100)
+kids_menu = Menu('Kids', kids_items, 1100, 2100)
 
 # All Menu OBJECTS
 menus = [brunch_menu, early_bird_menu, dinner_menu, kids_menu]
