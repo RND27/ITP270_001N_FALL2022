@@ -86,6 +86,17 @@ kids_items = {
 }
 kids_menu = Menu('Kids', kids_items, 1100, 2100)
 
+# All Menu OBJECTS
+menus = [brunch_menu, early_bird_menu, dinner_menu, kids_menu]
+
+flagship_store = Franchise("1232 West End Road", menus)
+new_installment = Franchise("12 East Muberry Street", menus)
+
+print(flagship_store.available_menus(1700))
+print(flagship_store.available_menus(1600))
+
+basta = Business("Basta Fazoolin' with my Heart", [flagship_store, new_installment])
+
 #Arepa
 arepas_items = {
   'arepa pabellon': 7.00, 
@@ -93,21 +104,10 @@ arepas_items = {
   'guayanes arepa': 8.00, 
   'jamon arepa': 7.50
 }
-arepas_menu = Menu("Take a' Arepa", arepa_items, 1000, 2000)
+arepas_menu = Menu("Take a' Arepa", arepas_items, 1000, 2000)
 
-# All Menu OBJECTS
-menus = [brunch_menu, early_bird_menu, dinner_menu, kids_menu]
+arepas_place = Franchise("189 Fitzgerald Avenue", [arepas_menu])
 
-flagship_store = Franchise("1232 West End Road", menus)
-new_installment = Franchise("12 East Muberry Street", menus)
+arepa = Business("Take a' Arepa", [arepas_place])
 
-print(flagship_store.available_menus(1200))
-print(flagship_store.available_menus(1600))
-
-basta = Business("Basta Fazoolin' with my Heart") [flagship_store, new_installment])
-
-arepas_place = Franchise("189 Fitzgerald Avenue", [arepas_]menus)
-
-barepa = Business("Take a' Arepa", [arepas_place])
-
-print(arepa.franchises[0])
+print(arepa.franchises[0].menus[0])
