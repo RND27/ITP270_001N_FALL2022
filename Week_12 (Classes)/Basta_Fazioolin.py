@@ -1,14 +1,24 @@
-class Franchise
-  def __init(self, address, menus):
-        self.address = address
-        self.menus = menus
+class Franchise:
+  def __init__(self, address, menus):
+    self.address = address
+    self.menus = menus
 
+def __repr__(self):
+  return self.address
+
+def available_menus(self, time):
+      avaiable_menus = []
+      for menu in self.menus:
+        if time >= menu.start_time and time <= menu.end_time:
+            available_menus.append(menu)
+      return available_menu
+        
 class Menu:
     def __init__(self, name, items, start_time, end_time):
-        self.name = name
-        self.items = items
-        self.start_time = start_time
-        self.end_time = end_time
+      self.name = name
+      self.items = items
+      self.start_time = start_time
+      self.end_time = end_time
 
     def __repr__(self):
         return self.name + " menu is available from " + str(self.start_time) + " to " + str(self.end_time)
@@ -71,5 +81,7 @@ kids = Menu('Kids', kids_items, 1100, 2100)
 # All Menu OBJECTS
 menus = [brunch_menu, early_bird_menu, dinner_menu, kids_menu]
 
-flagship_store = Franchise('1234 West End Rd', menus)
+flagship_store = Franchise('1232 West End Rd', menus)
 new_installments = Franchise('12 East Mulberry Street', menus)
+
+print(flagship_store.available_menus(1200))
