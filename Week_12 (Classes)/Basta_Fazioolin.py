@@ -4,6 +4,14 @@ class Franchise:
     self.menus = menus
 
   def __repr__(self):
+    return("The restaurant is in {a}".format(a = self.address))
+
+class Business:
+  def __init__(self, name, franchises):
+    self.name = name
+    self.franchises = franchises
+
+  def __repr__(self):
     return self.address
 
   def available_menus(self, time):
@@ -78,10 +86,19 @@ kids_items = {
 }
 kids_menu = Menu('Kids', kids_items, 1100, 2100)
 
+#Franchise Menu
+franchise_menu = {
+  'arepa pabellon': 7.00, 
+  'pernil arepa': 8.50, 
+  'guayanes arepa': 8.00, 
+  'jamon arepa': 7.50
+}
+
 # All Menu OBJECTS
 menus = [brunch_menu, early_bird_menu, dinner_menu, kids_menu]
 
-flagship_store = Franchise('1232 West End Rd', menus)
-new_installments = Franchise('12 East Mulberry Street', menus)
+flagship_store = Franchise("1232 West End Road", menus)
+new_installment = Franchise("12 East Muberry Street", menus)
 
 print(flagship_store.available_menus(1200))
+print(flagship_store.available_menus(1600))
