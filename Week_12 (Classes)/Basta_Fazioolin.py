@@ -64,7 +64,7 @@ early_bird_items = {
 }
 early_bird_menu = Menu('Early Bird', early_bird_items, 1500, 1800)
 
-print(early_bird_menu.calculate_bill(['salumeria    plate', 'mushroom ravioli (vegan)', 'coffee']))
+#print(early_bird_menu.calculate_bill(['salumeria    plate', 'mushroom ravioli (vegan)', 'coffee']))
 
 # Dinner Menu
 dinner_items = {
@@ -86,13 +86,14 @@ kids_items = {
 }
 kids_menu = Menu('Kids', kids_items, 1100, 2100)
 
-#Franchise Menu
-franchise_menu = {
+#Arepa
+arepas_items = {
   'arepa pabellon': 7.00, 
   'pernil arepa': 8.50, 
   'guayanes arepa': 8.00, 
   'jamon arepa': 7.50
 }
+arepas_menu = Menu("Take a' Arepa", arepa_items, 1000, 2000)
 
 # All Menu OBJECTS
 menus = [brunch_menu, early_bird_menu, dinner_menu, kids_menu]
@@ -102,3 +103,11 @@ new_installment = Franchise("12 East Muberry Street", menus)
 
 print(flagship_store.available_menus(1200))
 print(flagship_store.available_menus(1600))
+
+basta = Business("Basta Fazoolin' with my Heart") [flagship_store, new_installment])
+
+arepas_place = Franchise("189 Fitzgerald Avenue", [arepas_]menus)
+
+barepa = Business("Take a' Arepa", [arepas_place])
+
+print(arepa.franchises[0])
