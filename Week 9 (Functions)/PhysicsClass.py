@@ -1,7 +1,3 @@
-#ricky dunbar
-#ITP270
-#10/24/22
-
 train_mass = 22680
 train_acceleration = 10
 train_distance = 100
